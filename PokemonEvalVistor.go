@@ -15,7 +15,6 @@ type PokemonData struct {
 }
 
 type PokemonEvalVisitor struct {
-	pokemonSearchParser.BaseAdvancedSearchVisitor
 	pokemonData *PokemonData
 }
 
