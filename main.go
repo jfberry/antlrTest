@@ -14,6 +14,7 @@ func main() {
 	lexer := pokemonSearchParser.NewAdvancedSearchLexer(is)
 	stream := antlr.NewCommonTokenStream(lexer, 0)
 	parser := pokemonSearchParser.NewAdvancedSearchParser(stream)
+	parser.Interpreter.SetPredictionMode(antlr.PredictionModeSLL)
 	parser.BuildParseTrees = true
 	tree := parser.Entry()
 
